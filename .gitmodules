@@ -1,0 +1,3 @@
+[submodule "native/sss"]
+	path = native/sss
+	url = https://github.com/dsprenkels/sss.git
