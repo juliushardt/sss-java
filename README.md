@@ -1,5 +1,5 @@
 # sss-java
-Java bindings for Daan Sprenkels's Shamir secret sharing library sss
+Java bindings for [Daan Sprenkels's Shamir secret sharing library](https://github.com/dsprenkels/sss)
 
 ## Features
 * Simple, stateless API
@@ -109,7 +109,7 @@ finally {
     git clone --recurse-submodules https://github.com/juliushardt/sss-java.git
     ```
 1. Fix symlinks: If you use Windows and git is not configured to create symlinks correctly, you need to fix the broken symlinks in the sss submodule:
-    1. By default, creating symbolic links requires administrative privileges. You can opt out of this by enabling developer mode on your machine. To do so, type Win+R, open `ms-settings:developers` and switch on "Developer Mode".
+    1. By default, creating symbolic links requires administrative privileges. [You can opt out of this by enabling developer mode on your machine](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/). To do so, type Win+R, open `ms-settings:developers` and switch on "Developer Mode".
     1. Open a PowerShell console and create the symbolic links:
     ```powershell
     cd \path\to\sss-java\
@@ -146,7 +146,7 @@ finally {
 
 ## Building
 ```sh
-cd \path\to\sss-java\
+cd /path/to/sss-java
 # Build the native wrapper library for your platform
 make
 
