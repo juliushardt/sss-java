@@ -31,7 +31,7 @@ ShamirsSecretSharing secretSharing = ShamirsSecretSharing.create();
 ### Sharing a secret
 ```java
 // The secret to share must be a byte array. If you want to share e.g. a string, you need to convert it to a byte array first.
-byte[] secret = new byte[] { 0xaa, 0xbb, 0xcc, 0xdd };
+byte[] secret = "Hello world!".getBytes(StandardCharsets.UTF_8);
 
 // Number of shares to generate. Must be in the range 0 < n < 256
 int n = 19;
@@ -69,6 +69,7 @@ byte[] secret = null;
 try {
     // Reconstruct the secret
     secret = secretSharing.reconstruct(shares);
+    System.out.println(new String(reconstructedSecret, StandardCharsets.UTF_8));
     YourCode.doSomethingWith(secret);
 }
 catch (InvalidSharesException exc) {
@@ -148,7 +149,9 @@ finally {
 ```sh
 cd /path/to/sss-java
 # Build the native wrapper library for your platform
+cd native
 make
+cd ..
 
 # Build the Java library
 ./gradlew build

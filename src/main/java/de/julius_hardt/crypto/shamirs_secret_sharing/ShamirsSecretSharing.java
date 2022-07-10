@@ -5,7 +5,7 @@ import com.nativeutils.NativeUtils;
 import java.io.IOException;
 
 /**
- * Implementation of Shamir's Secret Sharing powered by D. Sprenkels's sss library (https://github.com/dsprenkels/sss)
+ * Implementation of Shamir's Secret Sharing powered by <a href="https://github.com/dsprenkels/sss">D. Sprenkels's sss library</a>
  */
 public class ShamirsSecretSharing {
     static {
